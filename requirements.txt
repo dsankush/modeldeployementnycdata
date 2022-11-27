@@ -1,3 +1,4 @@
+python = ">=3.5, <3.8"
 Flask
 sklearn
 pandas
