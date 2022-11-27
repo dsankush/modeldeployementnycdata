@@ -11,5 +11,5 @@ warnings
 datetime
 google
 statsmodels
-python
+python == 3.7
 gunicorn
