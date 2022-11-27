@@ -2,9 +2,9 @@ import json
 import pickle
 from flask import Flask,request,app,jsonify,url_for,render_template
 import numpy as np
-import os
+
 from sklearn.preprocessing import StandardScaler
-#import xgboost
+
 
 app=Flask(__name__)
 
@@ -46,8 +46,6 @@ def predict():
 
 
 if __name__=="__main__":
-    import os
-    port = int(os.environ.get('PORT', 5000))
     app.run(debug=True)
    
      
