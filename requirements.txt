@@ -1,0 +1,15 @@
+Flask
+sklearn
+pandas
+numpy
+matplotlib
+xgboost == 1.6.3
+seaborn
+scipy
+haversine
+warnings
+datetime
+google
+statsmodels
+python == 3.7
+gunicorn

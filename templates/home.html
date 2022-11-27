@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Boston House Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="vendor_id" placeholder="vendor_id" required="required" /><br>
+    	<input type="text" name="passenger_count" placeholder="passenger_count" required="required" /><br>
+        <input type="text" name="pickup_longitude" placeholder="pickup_longitude" required="required" /><br>
+        <input type="text" name="pickup_latitude" placeholder="pickup_latitude" required="required" /><br>
+        <input type="text" name="dropoff_longitude" placeholder="dropoff_longitude" required="required" /><br>
+        <input type="text" name="dropoff_latitude" placeholder="dropoff_latitude" required="required" /><br>
+        <input type="text" name="store_and_fwd_flag" placeholder="store_and_fwd_flag" required="required" /><br>
+        <input type="text" name="pickup_month" placeholder="pickup_month" required="required" /><br>
+        <input type="text" name="pickup_weekday" placeholder="pickup_weekday" required="required" /><br>
+        <input type="text" name="pickup_hour" placeholder="pickup_hour" required="required" /><br>
+        <input type="text" name="dropoff_hour" placeholder="dropoff_hour" required="required" /><br>
+        <input type="text" name="pickup_minute" placeholder="pickup_minute" required="required" /><br>
+        <input type="text" name="dropoff_minute" placeholder="dropoff_minute" required="required" /><br>
+        <input type="text" name="pickup_day" placeholder="pickup_day" required="required" /><br>
+        <input type="text" name="trip_distance" placeholder="trip_distance" required="required" /><br>
+        <input type="text" name="pickup_day_time" placeholder="pickup_day_time" required="required" /><br>
+        <input type="text" name="dropoff_day_time" placeholder="dropoff_day_time" required="required" /><br>
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
