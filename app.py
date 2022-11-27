@@ -19,16 +19,16 @@ scalar = StandardScaler()
 def home():
     return render_template('home.html')
 
-@app.route('/predict_api',methods=['POST'])
-def predict_api():
-    data=request.json['data']
-    print(data)
-    print(np.array(list(data.values())).reshape(1,-1))
-    inputs = scalar.fit_transform(np.array(list(data)).reshape(1, -1))
-    pca_trans = pca_transform.transform(np.array(list(inputs)).reshape(1, -1))
-    output=output = final_model.predict(pca_trans)
-    print(output[0])
-    return jsonify(output[0])
+# @app.route('/predict_api',methods=['POST'])
+# def predict_api():
+#     data=request.json['data']
+#     print(data)
+#     print(np.array(list(data.values())).reshape(1,-1))
+#     inputs = scalar.fit_transform(np.array(list(data)).reshape(1, -1))
+#     pca_trans = pca_transform.transform(np.array(list(inputs)).reshape(1, -1))
+#     output=output = final_model.predict(pca_trans)
+#     print(output[0])
+#     return jsonify(output[0])
 
 @app.route('/predict',methods=['POST'])
 def predict():
